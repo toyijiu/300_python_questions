@@ -23,6 +23,7 @@ def get_lines(fp):
                 yield m[tmp:i+1].decode()
                 tmp = i+1
 
+#use yield to avoid the memory question
 def read_file(fpath):
    BLOCK_SIZE = 65536
    with open(fpath, 'rb') as f:
